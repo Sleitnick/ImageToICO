@@ -209,6 +209,7 @@ public class ImageToICO extends Application {
 	
 	private void createGui() {
 		primaryStage.setTitle("Image To ICO");
+		primaryStage.getIcons().add(new javafx.scene.image.Image("com/sleitnick/imagetoico/icon.png"));
 		primaryStage.setResizable(false);
 		
 		FileChooser fileChooser = new FileChooser();
@@ -288,7 +289,7 @@ public class ImageToICO extends Application {
         Scene loginScene = new Scene(grid, 400, 350);
 		
 		primaryStage.setScene(loginScene);
-		primaryStage.getIcons().add(new javafx.scene.image.Image("file:imgs/icon.png"));
+		//primaryStage.getIcons().add(new javafx.scene.image.Image("file:imgs/icon.png"));
         loginScene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         
         setSelectedFile(null, true);
