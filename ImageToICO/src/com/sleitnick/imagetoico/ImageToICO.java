@@ -137,8 +137,9 @@ public class ImageToICO extends Application {
 		grid.setVgap(10);
 		grid.setPadding(new Insets(25, 25, 25, 25));
 		
-		Text scenetitle = new Text("Welcome");
+		Text scenetitle = new Text("Image To ICO");
 		scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+		scenetitle.setId("welcome-text");
 		grid.add(scenetitle, 0, 0, 2, 1);
 		
 		Label userName = new Label("User Name:");
@@ -160,17 +161,20 @@ public class ImageToICO extends Application {
 		grid.add(hbBtn, 1, 4);
 		
 		final Text actiontarget = new Text();
+		actiontarget.setFill(Color.FIREBRICK);
+		actiontarget.setId("actiontarget");
         grid.add(actiontarget, 1, 6);
         
         btn.setOnAction((ActionEvent actionEvent) -> {
             actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Sign in button pressed");
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Select Image");
-            fileChooser.showOpenDialog(primaryStage);
         });
+        
+        Scene loginScene = new Scene(grid, 400, 300);
 		
-		primaryStage.setScene(new Scene(grid, 400, 300));
+		primaryStage.setScene(loginScene);
+		primaryStage.getIcons().add(new javafx.scene.image.Image("file:imgs/icon.png"));
+        loginScene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 		primaryStage.show();
 	}
 	
