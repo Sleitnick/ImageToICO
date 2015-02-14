@@ -1,19 +1,26 @@
 .root {
-	-fx-background-color: rgba(240,240,240,1);
+	-fx-background-color: rgba(100,100,100,1);
 }
 
 .label {
+	-fx-text-align: center;
 	-fx-font-size: 12px;
-	-fx-font-weight: bold;
-	-fx-text-fill: #333333;
+	-fx-text-fill: rgba(255, 255, 255, 1);
+	-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.check-box {
+	-fx-text-align: center;
+	-fx-font-size: 12px;
+	-fx-text-fill: rgba(255, 255, 255, 1);
 	-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
 #welcome-text {
-	-fx-font-size: 32px;
+	-fx-font-size: 38px;
 	-fx-font-family: "Arial Black";
-	-fx-fill: #818181;
-	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+	-fx-fill: rgba(255, 255, 255, 1);
+	/*-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.3) , 6, 0.0 , 0 , 2 );*/
 }
 
 #actiontarget {
@@ -23,13 +30,14 @@
 }
 
 .button {
+	-fx-font-size: 14px;
 	-fx-text-fill: white;
-	-fx-font-family: "Arial Narrow";
+	-fx-font-family: "Arial";
 	-fx-font-weight: bold;
-	-fx-background-color: linear-gradient(#61a2b1, #2A5058);
-	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+	-fx-background-color: linear-gradient(rgba(200, 200, 200, 1), rgba(140, 140, 140, 1));
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 5, 0.0 , 0 , 1 );
 }
 
 .button:hover {
-	-fx-background-color: linear-gradient(#2A5058, #61a2b1);
+	-fx-background-color: linear-gradient(rgba(220, 220, 220, 1), rgba(160, 160, 160, 1));
 }
